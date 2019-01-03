@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <title>Primer Concurso de Geometría</title>
+	<link href= "css/bootstrap.css" rel="stylesheet">
+	<link href= "css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <audio src="sound/abrir.mp3" id="abrir"></audio>
+      <audio src="sound/correcto.mp3" id="soundCorrecto"></audio>
+      <audio src="sound/incorrecto.mp3" id="soundIncorrecto"></audio>
+      <audio src="sound/respuesta.mp3" id="soundRespuesta"></audio>
+      <audio src="sound/temporizador.mp3" id="temporizador"></audio>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <img class="img-responsive" src="img/logo.jpg">
+          </div>
+        </div>
+      </nav>
+    <div class="jumbotron">
+    <div id="answer-back" class="hide-question">
+      <div class="timer">
+            <div class="container">
+                <div id="minute">00</div>
+                <div class="divider">:</div>
+                <div id="second">00</div>                
+            </div>
+            <button id="btn-comenzar" class="btn btn-success">Comenzar</button>
+        </div>
+    </div>    
+	<button type="button" class="btn btn-primary" data-toggle="tooltip" title="Figuras Geométricas">Figuras Geométricas</button>
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Cuerpos Geométricos">Cuerpos Geométricos</button>
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Ángulos">Ángulos</button>
+  <button type="button" class="btn btn-primary" data-toggle="tooltip" title="Fórmulas">Fórmulas</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="10categoria1">10</button>
+  <button type="button" class="btn btn-warning" id="10categoria2">10</button>
+  <button type="button" class="btn btn-warning" id="10categoria3">10</button>
+  <button type="button" class="btn btn-warning" id="10categoria4">10</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="20categoria1">20</button>
+  <button type="button" class="btn btn-warning" id="20categoria2">20</button>
+  <button type="button" class="btn btn-warning" id="20categoria3">20</button>
+  <button type="button" class="btn btn-warning" id="20categoria4">20</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="30categoria1">30</button>
+  <button type="button" class="btn btn-warning" id="30categoria2">30</button>
+  <button type="button" class="btn btn-warning" id="30categoria3">30</button>
+  <button type="button" class="btn btn-warning" id="30categoria4">30</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="40categoria1">40</button>
+  <button type="button" class="btn btn-warning" id="40categoria2">40</button>
+  <button type="button" class="btn btn-warning" id="40categoria3">40</button>
+  <button type="button" class="btn btn-warning" id="40categoria4">40</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="50categoria1">50</button>
+  <button type="button" class="btn btn-warning" id="50categoria2">50</button>
+  <button type="button" class="btn btn-warning" id="50categoria3">50</button>
+  <button type="button" class="btn btn-warning" id="50categoria4">50</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="60categoria1">60</button>
+  <button type="button" class="btn btn-warning" id="60categoria2">60</button>
+  <button type="button" class="btn btn-warning" id="60categoria3">60</button>
+  <button type="button" class="btn btn-warning" id="60categoria4">60</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="70categoria1">70</button>
+  <button type="button" class="btn btn-warning" id="70categoria2">70</button>
+  <button type="button" class="btn btn-warning" id="70categoria3">70</button>
+  <button type="button" class="btn btn-warning" id="70categoria4">70</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="80categoria1">80</button>
+  <button type="button" class="btn btn-warning" id="80categoria2">80</button>
+  <button type="button" class="btn btn-warning" id="80categoria3">80</button>
+  <button type="button" class="btn btn-warning" id="80categoria4">80</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="90categoria1">90</button>
+  <button type="button" class="btn btn-warning" id="90categoria2">90</button>
+  <button type="button" class="btn btn-warning" id="90categoria3">90</button>
+  <button type="button" class="btn btn-warning" id="90categoria4">90</button>
+  <br>
+  <button type="button" class="btn btn-warning" id="100categoria1">100</button>
+  <button type="button" class="btn btn-warning" id="100categoria2">100</button>
+  <button type="button" class="btn btn-warning" id="100categoria3">100</button>
+  <button type="button" class="btn btn-warning" id="100categoria4">100</button>
+  <br>
+  <button type="button" class="btn btn-success">Equipo 1</button>
+  <button type="button" class="btn btn-success">Equipo 2</button>
+  <button type="button" class="btn btn-success">Equipo 3</button>
+  <br>
+  <input class="puntos" type="text" id="10" value="0" disabled="disabled">
+  <input class="puntos" type="text" id="20" value="0" disabled="disabled">
+  <input class="puntos" type="text" id="30" value="0" disabled="disabled">
+  <br>
+  <button type="button" class="btn btn-danger" id="reinicio">Reiniciar Juego</button>
+	</div>
+ <footer class="footer">
+        <p>Primer Concurso de Geometría</p>
+    </footer>
+    </div>
+    <script src= "js/jquery.js"></script>
+	<script src= "js/bootstrap.js"></script>
+  <script src= "js/cronometro.js"></script>
+  <script src= "js/pregunta.js"></script>
+  <script src= "js/cuestionario.js"></script>
+  </body>
+</html>

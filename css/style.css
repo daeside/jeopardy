@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* ---------------------------------------------------
+    General
+----------------------------------------------------- */
+
+html 
+{
+  position: relative;
+  min-height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body 
+{
+    font-family: 'Roboto', sans-serif;
+    background: rgb(220, 224, 230);
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+
+p 
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #404040;
+}
+
+a, a:hover, a:focus 
+{
+    font-family: 'Roboto', sans-serif;
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    Header
+----------------------------------------------------- */
+
+.navbar
+{
+    background-color: rgb(28, 157, 116);
+    border: none;
+    height: 120px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.navbar img
+{
+    width: 100%;
+	height: 120px;
+	border-radius: 5px;
+}
+
+/* ---------------------------------------------------
+    Principal
+----------------------------------------------------- */
+
+.jumbotron
+{
+    text-align: center;
+    background: rgb(251, 252, 252); 
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.4);
+    padding: 15px 0px 15px 0px
+}
+
+/* ---------------------------------------------------
+    Footer
+----------------------------------------------------- */
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/* ---------------------------------------------------
+    Botones
+----------------------------------------------------- */
+
+.btn-primary
+{
+    width: 200px;
+    height: 36px;
+    margin: 5px 15px 5px 15px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-warning
+{
+   width: 140px;
+   height: 34px;
+   font-weight: 700;
+   margin: 5px 45px 5px 45px;
+   font-size: 17px;
+   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);   
+}
+
+.btn-success
+{
+    width: 200px;
+    height: 36px;
+    font-weight: 700;
+    margin: 5px 15px 5px 15px;
+    font-size: 18px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.puntos
+{
+    width: 170px;
+    height: 38px;
+    margin: 5px 25px 5px 25px;
+    border: 1px solid darkgray;
+    background: transparent;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    color: #252525;
+    outline: 0;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-danger
+{
+    width: 220px;
+    height: 36px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+    
+}
+
+/* ---------------------------------------------------
+    Ventana Pregunta
+----------------------------------------------------- */
+
+.hide-question
+{
+    display: none;
+}
+
+.show-question
+{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 5;
+    animation: show linear 0.2s;
+    animation-iteration-count: 1; 
+}
+
+@keyframes show
+{
+  0% 
+  {
+    opacity:0;
+    transform: translate(0px,10px);
+  }
+  
+  100% 
+    {
+    opacity:1;
+    transform: translate(0px,0px);
+  }
+}
+
+.answer-container
+{
+    max-width: 900px;
+    padding: 10px 15px 10px 15px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.answer-container p
+{
+	font-size: 23px;
+    font-weight: 700;
+}
+
+.check
+{
+    width: 19px;
+    height: 19px;
+}
+
+.answer-container label
+{
+    font-size: 23px;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.answer-container span
+{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.answer-container button
+{
+    width: 105px;
+    height: 35px;
+    margin: 5px 5px 5px 5px;
+    font-size: 17px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+.answer-container #clos
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.answer-container img
+{
+    width: 113px;
+    height: 93px;
+    padding-bottom: 5px;
+}
+.answer-back-hide
+{
+    animation: hide linear 0.2s;
+    animation-iteration-count: 1;
+}
+
+@keyframes hide
+{
+  0% 
+  {
+    opacity:1;
+    transform: translate(0px,0px);  
+  }
+  
+  100% 
+    {
+    opacity:0;
+    transform: translate(0px,10px);
+  }
+}
+
+/* ---------------------------------------------------
+    Cronometro
+----------------------------------------------------- */
+
+.timer
+{
+    max-width: 200px;
+    padding: 3px 0px 3px 0px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.timer .container
+{
+    display: table;
+    background: #5BC0DE;
+    color: #EEE;
+    width: 100px;
+    text-align: center;
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    margin-top: 5px;
+}
+
+#btn-comenzar
+{
+    font-size: 18px;
+    font-weight: 700;
+    width: 105px;
+    height: 35px;
+}
+
+.timer .container div
+{
+    display: table-cell;
+    font-size: 24px;
+    font-weight: 700;
+}
+
